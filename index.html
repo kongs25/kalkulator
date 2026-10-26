@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator Sederhana</title>
+  <!-- Menghubungkan file CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="kalkulator">
+
+    <!-- Layar: tempat angka ditampilkan -->
+    <div class="layar">
+      <div id="riwayat" class="riwayat"></div>
+      <div id="hasil" class="hasil">0</div>
+    </div>
+
+    <!-- Tombol-tombol kalkulator -->
+    <div class="tombol">
+      <button class="fungsi" onclick="hapusSemua()">C</button>
+      <button class="fungsi" onclick="hapusSatu()">⌫</button>
+      <button class="fungsi" onclick="persen()">%</button>
+      <button class="operator" onclick="pilihOperator('/')">÷</button>
+
+      <button onclick="tambahAngka('7')">7</button>
+      <button onclick="tambahAngka('8')">8</button>
+      <button onclick="tambahAngka('9')">9</button>
+      <button class="operator" onclick="pilihOperator('*')">×</button>
+
+      <button onclick="tambahAngka('4')">4</button>
+      <button onclick="tambahAngka('5')">5</button>
+      <button onclick="tambahAngka('6')">6</button>
+      <button class="operator" onclick="pilihOperator('-')">−</button>
+
+      <button onclick="tambahAngka('1')">1</button>
+      <button onclick="tambahAngka('2')">2</button>
+      <button onclick="tambahAngka('3')">3</button>
+      <button class="operator" onclick="pilihOperator('+')">+</button>
+
+      <button class="lebar" onclick="tambahAngka('0')">0</button>
+      <button onclick="tambahTitik()">.</button>
+      <button class="sama" onclick="hitung()">=</button>
+    </div>
+
+  </div>
+
+  <!-- Menghubungkan file JavaScript (di bawah agar elemen HTML sudah dimuat) -->
+  <script src="script.js"></script>
+</body>
+</html>

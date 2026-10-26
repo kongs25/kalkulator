@@ -1,0 +1,86 @@
+/* Reset dasar: hilangkan margin & padding bawaan browser */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Latar halaman: kalkulator diletakkan di tengah */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* Kotak kalkulator */
+.kalkulator {
+  width: 320px;
+  padding: 20px;
+  background: #1e1e2f;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Layar tampilan angka */
+.layar {
+  background: #2b2b40;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 20px;
+  text-align: right;
+  min-height: 90px;
+  overflow: hidden;
+}
+
+.riwayat {
+  color: #8a8aa5;
+  font-size: 16px;
+  min-height: 22px;
+}
+
+.hasil {
+  color: white;
+  font-size: 40px;
+  margin-top: 10px;
+  word-wrap: break-word;
+}
+
+/* Susunan tombol: grid 4 kolom */
+.tombol {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* Gaya semua tombol */
+button {
+  padding: 18px 0;
+  font-size: 20px;
+  border: none;
+  border-radius: 12px;
+  background: #3a3a55;
+  color: white;
+  cursor: pointer;
+  transition: 0.15s;
+}
+
+button:hover {
+  filter: brightness(1.2);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Warna khusus tiap jenis tombol */
+.fungsi   { background: #5a5a7a; }
+.operator { background: #ff9f0a; }
+.sama     { background: #30d158; }
+
+/* Tombol 0 memakai 2 kolom */
+.lebar {
+  grid-column: span 2;
+}
